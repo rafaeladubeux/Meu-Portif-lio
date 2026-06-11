@@ -11,6 +11,8 @@ Sou **Rafaela Dubeux Godoy**, estudante de **Ciência da Computação na CESAR S
 ## Tecnologias Utilizadas
 * **Front-End:** HTML5, CSS3 (Flexbox/Grid/Variáveis) e JavaScript (Vanilla).
 * **Funcionalidades:** Font Awesome (Ícones), Formspree (Envio de formulário) e `localStorage` (Salvar o tema escolhido).
+<br><br><img src="https://img.shields.io/badge/C++-881086?style=for-the-badge&logo=c%2B%2B&logoColor=white"/>  <img src="https://img.shields.io/badge/HTML-881086?style=for-the-badge&logo=html5&logoColor=white"/>  <img src="https://img.shields.io/badge/CSS-881086?style=for-the-badge&logo=css&logoColor=white"/>  <img src="https://img.shields.io/badge/JavaScript-881086?style=for-the-badge&logo=javascript&logoColor=white"/>
+
 
 ---
 
