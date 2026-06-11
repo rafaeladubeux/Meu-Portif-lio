@@ -2,7 +2,6 @@
 Repositório do meu portfólio pessoal, desenvolvido de forma responsiva, com identidade visual moderna em tons de roxo e suporte a **Modo Escuro (Dark Mode)**.
 
 ---
-
 ## Sobre Mim
 Sou **Rafaela Dubeux Godoy**, estudante de **Ciência da Computação na CESAR School**. Busco criar soluções reais através do código, com foco em Ciência de Dados, IA, Desenvolvimento de Software e Gestão.
 
