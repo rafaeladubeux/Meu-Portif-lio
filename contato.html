@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contato | Seu Nome</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Meu Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
@@ -13,78 +13,72 @@
         <div class="logo">Portfólio by Rafaela D.</div>
         <nav>
             <ul>
-                
                 <li><a href="index.html#inicio">Início</a></li>
                 <li><a href="index.html#sobre">Sobre Mim</a></li>
                 <li><a href="projetos.html">Projetos</a></li>
                 <li><a href="contato.html" class="active">Contato</a></li>
-            
             </ul>
         </nav>
     </header>
 
-    <main class="contact-container">
-    
-        <section class="contact-info">
-        <h1>Redes de contato</h1>
-        <p>Seja para discutir novas oportunidades de projetos ou apenas para expandir o networking, minha caixa de entrada está sempre aberta.</p>
+    <div class="contact-section-wrapper">
         
-        <div class="social-buttons">
-            <a href="https://www.linkedin.com/in/rafaela-dubeux-godoy/" target="_blank" class="btn-social linkedin">
-            <i class="fab fa-linkedin"></i> Linkedin
-            </a>
-            <a href="https://github.com/rafaeladubeux" target="_blank" class="btn-social github">
-            <i class="fab fa-github"></i> Github
-            </a>
-            <a href="https://www.instagram.com/dubeuxrafaela/" target="_blank" class="btn-social instagram">
-            <i class="fab fa-instagram"></i> Instagram
-            </a>
-            <a href="mailto:rafaeladubeuxgodoy@gmail.com" class="btn-social gmail">
-            <i class="fas fa-envelope"></i> Gmail
-            </a>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Vamos conversar?</h2>
+                <p>Se você tem um projeto em mente, uma proposta de trabalho ou apenas quer trocar uma ideia, sinta-se à vontade para me mandar uma mensagem!</p>
+                
+                <div class="info-links">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>rafaeladubeuxgodoy@gmail.com</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Recife, Brasil</span>
+                    </div>
+                </div>
+
+                <div class="social-media">
+                    <a href="https://www.linkedin.com/in/rafaela-dubeux-godoy/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/rafaeladubeux" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.instagram.com/dubeuxrafaela/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="contact-form-container">
+                <form action="https://formspree.io/f/mbdeakdq" method="POST" class="contact-form">
+                    <div class="input-group">
+                        <input type="text" id="name" name="name" required placeholder=" ">
+                        <label for="name">Nome</label>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="email" id="email" name="email" required placeholder=" ">
+                        <label for="email">E-mail</label>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="text" id="subject" name="subject" required placeholder=" ">
+                        <label for="subject">Assunto</label>
+                    </div>
+
+                    <div class="input-group">
+                        <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+                        <label for="message">Mensagem</label>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        Enviar Mensagem <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
         </div>
-        </section>
 
-        <section class="contact-form-container">
-        <form action="https://formspree.io/f/mqeodbqq" method="POST" class="contact-form">
-            
-            <div class="input-group">
-            <label for="name">Nome Completo</label>
-            <input type="text" id="name" name="name" placeholder="Escreva seu nome aqui" required>
-            </div>
-
-            <div class="input-group">
-            <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" placeholder="seuemail@email.com" required>
-            </div>
-
-            <div class="input-group">
-            <label for="subject">Assunto</label>
-            <select id="subject" name="subject" required>
-                <option value="" disabled selected>Escolha um assunto...</option>
-                <option value="freelance">Projetos</option>
-                <option value="vaga">Oportunidades para carreira</option>
-                <option value="papo">Bater um papo acadêmico</option>
-                <option value="papo">Outra opção</option>
-            </select>
-            </div>
-
-            <div class="input-group">
-            <label for="message">Mensagem</label>
-            <input type="text" id="message" name="message" placeholder="Digite sua mensagem" required>
-            </div>
-
-            <button type="submit" class="btn-submit">Enviar Mensagem</button>
-        </form>
-        </section>
-
-    </main>
-
-    <footer>
+    </div> <footer>
         <p>&copy; 2026 Portfólio by Rafaela D.</p>
     </footer>
 
     <script src="script.js"></script>
-    
 </body>
 </html>
