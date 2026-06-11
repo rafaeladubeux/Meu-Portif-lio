@@ -218,193 +218,213 @@ footer {
     margin-top: 2rem;
 }
 
-/* Container Principal (Layout Centralizado e Fluido) */
+----------------------------------------------------------------
+/*CONTATO*/
+/* Container Principal (Grid Responsivo) */
 .contact-container {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr; /* Divisão elegante e assimétrica */
-  max-width: 1100px;
-  width: 100%;
-  gap: 80px;
-  align-items: center;
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 900px;
+    width: 100%;
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-/* ==========================================
-   COLUNA ESQUERDA: Textos e Redes
-   ========================================== */
+/* Coluna de Informações (Esquerda) */
 .contact-info {
-  display: flex;
-  flex-direction: column;
+    background: linear-gradient(135deg, #881086 0%, #b654b5 100%);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.badge {
-  color: #131313; /* Roxo moderno/neon substituindo o vinho */
-  font-weight: 600;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  background-color: #9814ad;
-  padding: 6px 12px;
-  border-radius: 20px; /* Badge arredondada estilo startup */
-  width: max-content;
-  margin-bottom: 24px;
-}
-
-.contact-info h1 {
-  font-size: 2.8rem;
-  font-weight: 800;
-  line-height: 1.2;
-  color: #a765b6;
-  margin-bottom: 20px;
-  letter-spacing: -0.5px;
+.contact-info h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
 }
 
 .contact-info p {
-  color: #876e85; /* Cinza médio de alta leitura */
-  font-size: 1.05rem;
-  line-height: 1.7;
-  margin-bottom: 36px;
+    color: #c5c7cf;
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
-/* Botões das Redes Sociais (Estilo Clean) */
-.social-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  max-width: 220px;
+.info-links {
+    margin: 40px 0;
 }
 
-.btn-social {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 12px 16px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 0.9rem;
-  color: #75077d;
-  background-color: #b673c5;
-  border: 1px solid #e5e7eb; /* Bordas finas e sutis */
-  transition: all 0.2s ease-in-out;
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    color: #c5c7cf;
 }
 
-/* Efeito Hover Individual para cada rede */
-.btn-social:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+.info-item i {
+    font-size: 1.2rem;
 }
 
-.btn-social.linkedin:hover { color: #0077b5; border-color: #0077b5; }
-.btn-social.github:hover { color: #24292e; border-color: #24292e; }
-.btn-social.instagram:hover { color: #bd0c70; border-color: #bd0c70; }
-.btn-social.gmail:hover { color: #ea4335; border-color: #ea4335; }
+.social-media {
+    display: flex;
+    gap: 30px;
+}
 
+.social-media a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
 
-/* ==========================================
-   COLUNA DIREITA: Formulário Premium
-   ========================================== */
+.social-media a:hover {
+    background: #fff;
+    color: #881086;
+    transform: translateY(-3px);
+}
+
+/* Coluna do Formulário (Direita) */
 .contact-form-container {
-  background: #b673c5;
-  padding: 40px;
-  border-radius: 16px; /* Bordas mais arredondadas e amigáveis */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04); /* Sombra suave de profundidade */
-  border: 1px solid #e5e7eb;
+    padding: 40px;
+    background: #7d667d;;
 }
 
 .contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
 }
 
+/* Efeito de Label Flutuante Dinâmica */
 .input-group {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
+    position: relative;
+    width: 100%;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 12px 5px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #dbdfe4;
+    color: #dbd3db;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+    resize: none;
 }
 
 .input-group label {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #611f63;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+    position: absolute;
+    left: 5px;
+    top: 12px;
+    color: #fafbfc;
+    pointer-events: none;
+    transition: all 0.3s ease;
 }
 
-/* Inputs com foco elegante */
-.input-group input, 
-.input-group select, 
-.input-group textarea {
-  width: 100%;
-  padding: 14px 16px;
-  border: 1px solid #d1d5db;
-  border-radius: 8px;
-  background-color: #e8c6f0; /* Cinza extremamente claro */
-  font-size: 0.95rem;
-  color: #0c0c0c;
-  outline: none;
-  transition: all 0.2s ease;
+/* Quando o input focar ou tiver texto, a label "sobe" */
+.input-group input:focus ~ label,
+.input-group input:not(:placeholder-shown) ~ label,
+.input-group textarea:focus ~ label,
+.input-group textarea:not(:placeholder-shown) ~ label {
+    top: -12px;
+    font-size: 0.85rem;
+    color: #881086;
 }
 
-/* Efeito ao clicar no campo (Focus) */
-.input-group input:focus, 
-.input-group select:focus, 
+.input-group input:focus,
 .input-group textarea:focus {
-  background-color: #e8c6f0;
-  border-color: #e8c6f0; /* Borda roxa ao focar */
-  box-shadow: 0 0 0 4px rgba(109, 40, 217, 0.1); /* Brilho sutil em volta */
+    border-bottom-color: #881086;
 }
 
-.input-group input::placeholder, 
-.input-group textarea::placeholder {
-  color: #080808;
-}
-
-/* Botão Enviar Minimalista e Forte */
+/* Botão de Envio */
 .btn-submit {
-  background-color: #840a88; /* Botão quase preto, super premium */
-  color: #f2eeee;
-  border: none;
-  padding: 16px;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.2s;
-  margin-top: 8px;
+    background: #881086;
+    color: #fff;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
 }
 
 .btn-submit:hover {
-  background-color: #e8c6f0; /* Transiciona para o roxo no hover */
-  transform: translateY(-1px);
+    background: #c36ec2;
+    box-shadow: 0 4px 12px rgba(157, 157, 163, 0.4);
+    transform: translateY(-2px);
 }
 
-/* ==========================================
-   RESPONSIVIDADE (MOBILE)
-   ========================================== */
-@media (max-width: 900px) {
-  .contact-container {
-    grid-template-columns: 1fr; /* Vira uma coluna só no celular */
-    gap: 48px;
-  }
-  
-  .contact-info h1 {
-    font-size: 2.2rem;
-  }
+/* Responsividade para Telas Menores (Celulares) */
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
 
-  .contact-form-container {
-    padding: 24px; /* Diminui o espaçamento interno no celular */
-  }
-  
-  .social-buttons {
-    max-width: 100%;
-    flex-direction: row; /* Coloca os botões de rede lado a lado no celular */
-    flex-wrap: wrap;
-  }
+    .contact-info {
+        padding: 30px;
+    }
 
-  .btn-social {
-    flex: 1;
-    min-width: 140px;
-    justify-content: center;
-  }
+    .info-links {
+        margin: 25px 0;
+    }
+
+    .contact-form-container {
+        padding: 30px;
+    }
+}
+/* Configuração da área de contato (Zera impactos no restante do site) */
+.contact-section-wrapper {
+    width: 100%;
+    /* Desconta o tamanho médio do header e footer para centralizar no espaço que sobra */
+    min-height: calc(100vh - 140px); 
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    padding: 40px 20px;
+}
+
+/* Garante que o container do formulário se comporte bem no meio da seção */
+.contact-container {
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 900px;
+    width: 100%;
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsividade para celulares */
+@media (max-width: 768px) {
+    .contact-section-wrapper {
+        min-height: auto;
+        padding: 20px 10px;
+    }
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
 }
