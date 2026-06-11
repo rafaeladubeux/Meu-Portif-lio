@@ -1,0 +1,410 @@
+:root {
+    --bg-color: #d1a0d0;
+    --text-color: #141313;
+    --header-bg: #561355;
+    --header-text: #f2f3f4;
+    --card-bg: #ece5e5;
+    --accent-color: #6b0370;
+}
+
+[data-theme="dark"] {
+    --bg-color: #2a082e;
+    --text-color: #ffffff;
+    --header-bg: #2e2b2b;
+    --header-text: #e6dddd;
+    --card-bg: #252121;
+    --accent-color: #890475;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.7;
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Layout do Header com Flexbox */
+header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    color: var(--header-text);
+    text-decoration: none;
+    font-weight: 500;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+nav ul li a {
+    color: var(--header-text);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav ul li a.active {
+    border-bottom: 2px solid var(--accent-color);
+}
+
+/* Área de Conteúdo */
+main {
+    padding: 3rem 2rem;
+    flex: 1;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Alinhamento Centralizado Igual à Foto */
+.hero-avatar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+.avatar-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 4rem 2rem;
+    text-align: center;
+    max-width: 550px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(218, 213, 213, 0.25);
+}
+.hero {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(15, 15, 15, 0.1);
+}
+
+/* Container da Imagem com o efeito de iluminação de fundo */
+.avatar-image-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2.5rem;
+}
+
+.profile-avatar {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    border: 3px solid #121214;
+    box-shadow: 0 0 0 4px #42003e;
+    background-color: #3a3a4c;
+}
+
+.avatar-card h1 {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.avatar-card p {
+    color: #cc8bcb;
+    font-size: 1.15rem;
+    margin-bottom: 2rem;
+}
+
+/* Botão estilizado */
+#theme-toggle {
+    padding: 0.5rem 1rem;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#theme-toggle:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+}
+
+/* Grid de Interesses Inferior */
+.interests h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.card, .project-card {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Layout dos Cards com Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.card, .project-card {
+    background-color: var(--card-bg);
+    padding: 1.8rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+blockquote {
+    margin: 1.5rem 0;
+    padding-left: 1rem;
+    border-left: 4px solid var(--accent-color);
+    font-style: italic;
+}
+
+ul {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+a {
+    color: var(--accent-color);
+}
+
+/* Footer com Flexbox */
+footer {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Container Principal (Layout Centralizado e Fluido) */
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr; /* Divisão elegante e assimétrica */
+  max-width: 1100px;
+  width: 100%;
+  gap: 80px;
+  align-items: center;
+}
+
+/* ==========================================
+   COLUNA ESQUERDA: Textos e Redes
+   ========================================== */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.badge {
+  color: #131313; /* Roxo moderno/neon substituindo o vinho */
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  background-color: #9814ad;
+  padding: 6px 12px;
+  border-radius: 20px; /* Badge arredondada estilo startup */
+  width: max-content;
+  margin-bottom: 24px;
+}
+
+.contact-info h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #a765b6;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+.contact-info p {
+  color: #876e85; /* Cinza médio de alta leitura */
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 36px;
+}
+
+/* Botões das Redes Sociais (Estilo Clean) */
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 220px;
+}
+
+.btn-social {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #75077d;
+  background-color: #b673c5;
+  border: 1px solid #e5e7eb; /* Bordas finas e sutis */
+  transition: all 0.2s ease-in-out;
+}
+
+/* Efeito Hover Individual para cada rede */
+.btn-social:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.btn-social.linkedin:hover { color: #0077b5; border-color: #0077b5; }
+.btn-social.github:hover { color: #24292e; border-color: #24292e; }
+.btn-social.instagram:hover { color: #bd0c70; border-color: #bd0c70; }
+.btn-social.gmail:hover { color: #ea4335; border-color: #ea4335; }
+
+
+/* ==========================================
+   COLUNA DIREITA: Formulário Premium
+   ========================================== */
+.contact-form-container {
+  background: #b673c5;
+  padding: 40px;
+  border-radius: 16px; /* Bordas mais arredondadas e amigáveis */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04); /* Sombra suave de profundidade */
+  border: 1px solid #e5e7eb;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #611f63;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Inputs com foco elegante */
+.input-group input, 
+.input-group select, 
+.input-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background-color: #e8c6f0; /* Cinza extremamente claro */
+  font-size: 0.95rem;
+  color: #0c0c0c;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+/* Efeito ao clicar no campo (Focus) */
+.input-group input:focus, 
+.input-group select:focus, 
+.input-group textarea:focus {
+  background-color: #e8c6f0;
+  border-color: #e8c6f0; /* Borda roxa ao focar */
+  box-shadow: 0 0 0 4px rgba(109, 40, 217, 0.1); /* Brilho sutil em volta */
+}
+
+.input-group input::placeholder, 
+.input-group textarea::placeholder {
+  color: #080808;
+}
+
+/* Botão Enviar Minimalista e Forte */
+.btn-submit {
+  background-color: #840a88; /* Botão quase preto, super premium */
+  color: #f2eeee;
+  border: none;
+  padding: 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 8px;
+}
+
+.btn-submit:hover {
+  background-color: #e8c6f0; /* Transiciona para o roxo no hover */
+  transform: translateY(-1px);
+}
+
+/* ==========================================
+   RESPONSIVIDADE (MOBILE)
+   ========================================== */
+@media (max-width: 900px) {
+  .contact-container {
+    grid-template-columns: 1fr; /* Vira uma coluna só no celular */
+    gap: 48px;
+  }
+  
+  .contact-info h1 {
+    font-size: 2.2rem;
+  }
+
+  .contact-form-container {
+    padding: 24px; /* Diminui o espaçamento interno no celular */
+  }
+  
+  .social-buttons {
+    max-width: 100%;
+    flex-direction: row; /* Coloca os botões de rede lado a lado no celular */
+    flex-wrap: wrap;
+  }
+
+  .btn-social {
+    flex: 1;
+    min-width: 140px;
+    justify-content: center;
+  }
+}
